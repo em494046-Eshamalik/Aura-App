@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712" />
+      <stop offset="50%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#38bdf8" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="128" fill="url(#bg)" />
+  
+  <!-- Outer subtle circuit glow line -->
+  <path d="M 80 256 Q 256 120 432 256" stroke="rgba(56, 189, 248, 0.25)" stroke-width="4" fill="none" />
+  <path d="M 80 300 Q 256 420 432 300" stroke="rgba(99, 102, 241, 0.25)" stroke-width="4" fill="none" />
+
+  <!-- Central Diamond Shield Emblem -->
+  <g transform="translate(256, 256)" filter="url(#shadow)">
+    <!-- Outer Rotated Square -->
+    <rect x="-90" y="-90" width="180" height="180" rx="36" transform="rotate(45)" fill="url(#glow)" />
+    <!-- Inner Dark Core -->
+    <rect x="-65" y="-65" width="130" height="130" rx="24" transform="rotate(45)" fill="#030712" />
+    
+    <!-- Central 4-point Spark / Star -->
+    <path d="M 0 -45 Q 0 0 -45 0 Q 0 0 0 45 Q 0 0 45 0 Q 0 0 0 -45 Z" fill="#38bdf8" />
+    <circle cx="0" cy="0" r="10" fill="#ffffff" />
+  </g>
+</svg>
